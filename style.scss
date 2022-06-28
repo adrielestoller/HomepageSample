@@ -145,6 +145,7 @@ nav {
     button {
       width: 40%;
       padding: 0.7rem;
+      margin-left: .3rem;
 
       font-size: 0.7rem;
       text-align: center;
@@ -152,8 +153,14 @@ nav {
       border: none;
       border-radius: 0.8rem;
 
+      transition: all 0.5s;
+
       color: $gray-sixty;
       background-color: $blue-primary;
+    }
+
+    button:hover {
+      background-color: $blue-hover;
     }
   }
 }

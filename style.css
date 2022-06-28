@@ -102,12 +102,17 @@ nav ul {
 .hero .email-submit button {
   width: 40%;
   padding: 0.7rem;
+  margin-left: 0.3rem;
   font-size: 0.7rem;
   text-align: center;
   border: none;
   border-radius: 0.8rem;
+  transition: all 0.5s;
   color: #f2f2f2;
   background-color: #2d9cdb;
+}
+.hero .email-submit button:hover {
+  background-color: #227cb1;
 }
 
 .services {
