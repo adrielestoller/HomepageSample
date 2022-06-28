@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Poppins:wght@300;400;500;700&display=swap");
+
+$gray-primary: #333333;
+$gray-secundary: #4f4f4f;
+$gray-third: #828282;
+$gray-fourth: #bdbdbd;
+$gray-five: #e0e0e0;
+$gray-sixty: #f2f2f2;
+$blue-primary: #2d9cdb;
+$blue-hover: #227cb1;
+$green-primary: #27ae60;
+$red-primary: #eb5757;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-align: left;
+}
+
+///////// Navbar /////////
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 0.8rem 1.5rem 2.5rem 1rem;
+
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-family: "Heebo", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+
+  span {
+    width: 28px;
+    height: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    font-size: 1.2rem;
+  }
+}
+
+///////// Início /////////
+
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  h1,
+  h2,
+  p,
+  .email-submit {
+    margin: 0 2rem;
+  }
+
+  .subtitle-hero {
+    font-size: 0.8rem;
+    color: $blue-primary;
+  }
+
+  .img-hero {
+    width: 90%;
+
+    align-self: center;
+    margin: 1rem 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+
+  h1,
+  h2 {
+    max-width: 280px;
+
+    font-size: 1.5rem;
+    color: $gray-primary;
+  }
+
+  .description-hero {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    color: $gray-secundary;
+  }
+
+  .title-input {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+
+    color: $gray-third;
+  }
+
+  .email-submit {
+    max-width: 270px;
+    max-height: 60px;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 0.8rem;
+    border-radius: 0.9rem;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $gray-sixty;
+
+    input {
+      width: 100%;
+      margin-left: 0.5rem;
+
+      font-size: 0.7rem;
+      text-align: left;
+      text-decoration: none;
+      color: $gray-fourth;
+
+      border: none;
+      background-color: transparent;
+    }
+
+    button {
+      width: 40%;
+      padding: 0.7rem;
+
+      font-size: 0.7rem;
+      text-align: center;
+
+      border: none;
+      border-radius: 0.8rem;
+
+      color: $gray-sixty;
+      background-color: $blue-primary;
+    }
+  }
+}
+
+///////// Serviços /////////
+
+.services {
+  margin: 8rem 10rem 0 10rem;
+
+  h2 {
+    max-width: 270px;
+    margin-bottom: 5rem;
+
+    font-size: 1.5rem;
+
+    color: $gray-primary;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    align-items: left;
+    justify-content: left;
+
+    .card {
+      max-width: 95vw;
+      padding: 3rem;
+
+      transition: all 0.5s;
+
+      border-radius: 1rem;
+    }
+
+    .card-1 {
+      display: flex;
+      width: 67px;
+      height: 67px;
+
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+
+      background-color: $blue-primary;
+      color: #ffff;
+    }
+
+    .card-2 {
+      display: flex;
+      width: 67px;
+      height: 67px;
+
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+
+      background-color: $green-primary;
+      color: #ffff;
+    }
+
+    .card-3 {
+      display: flex;
+      width: 67px;
+      height: 67px;
+
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+
+      background-color: $red-primary;
+      color: #ffff;
+    }
+
+    h3 {
+      margin: 2rem 0 1.2rem 0;
+
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      color: $gray-primary;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+
+      text-align: left;
+
+      color: $gray-secundary;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem;
+
+      border: none;
+      border-radius: 0.5rem;
+
+      transition: all 0.5s;
+
+      background-color: $gray-five;
+      color: $gray-third;
+    }
+
+    .card:hover {
+      box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+
+      button {
+        background-color: $blue-primary;
+        color: #ffff;
+      }
+
+      button:hover {
+        background-color: $blue-hover;
+      }
+    }
+  }
+}
+
+///////// Tela Pequena /////////
+
+@media screen and (max-width: 768px) {
+  .nav-items {
+    display: none;
+  }
+
+  .services {
+    margin: 6rem 2rem 0 2rem;
+  }
+}
+
+///////// Tela Grande /////////
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 1rem 1rem 4rem 2rem;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .subtitle-hero {
+      font-size: 1rem;
+    }
+
+    h1,
+    h2 {
+      font-size: 3rem;
+    }
+
+    h1 {
+      max-width: 550px;
+    }
+
+    h2,
+    .description-hero {
+      max-width: 370px;
+    }
+
+    .description-hero {
+      font-size: 1rem;
+    }
+
+    .img-hero {
+      width: 95vw;
+    }
+
+    .title-input {
+      font-size: 0.8rem;
+    }
+
+    .email-submit {
+      max-width: 370px;
+
+      button,
+      input {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .services {
+    h2 {
+      font-size: 3rem;
+      max-width: 500px;
+    }
+
+    .card-container {
+      width: 80vw;
+
+      display: flex;
+      flex-direction: row;
+
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
