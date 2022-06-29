@@ -36,6 +36,21 @@ nav ul {
   list-style: none;
   font-size: 1.2rem;
 }
+nav .un {
+  display: inline-block;
+  cursor: pointer;
+}
+nav .un::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: #333333;
+  transition: 0.3s;
+}
+nav .un:hover::after {
+  width: 100%;
+}
 
 .hero {
   display: flex;
@@ -224,10 +239,14 @@ nav ul {
 }
 .our-works .grid-container .img-item {
   max-width: 520px;
+  transition: all 0.5s;
 }
 .our-works .grid-container .img-item img {
   width: 100%;
   border-radius: 1rem;
+}
+.our-works .grid-container .img-item:hover {
+  filter: brightness(75%);
 }
 .our-works .grid-container p {
   margin-top: 1rem;
@@ -239,11 +258,11 @@ nav ul {
   font-size: 1.2rem;
   color: #333333;
 }
+.our-works .grid-container .un::after {
+  background-color: #333333;
+}
 .our-works .see-more {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: right;
+  text-align: right;
 }
 .our-works .see-more p {
   font-size: 1.2rem;
@@ -251,8 +270,25 @@ nav ul {
   color: #2d9cdb;
 }
 .our-works .see-more span {
+  font-size: 0.8rem;
+  text-align: center;
+  vertical-align: middle;
   color: #2d9cdb;
-  align-self: center;
+}
+.our-works .un {
+  display: inline-block;
+  cursor: pointer;
+}
+.our-works .un::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 3px;
+  background-color: #2d9cdb;
+  transition: 0.3s;
+}
+.our-works .un:hover::after {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -272,7 +308,8 @@ nav ul {
     align-items: center;
     justify-content: center;
   }
-  .our-works .grid-container .item-1, .our-works .grid-container .item-3 {
+  .our-works .grid-container .item-1,
+.our-works .grid-container .item-3 {
     margin: 0;
   }
 }

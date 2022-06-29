@@ -57,6 +57,28 @@ nav {
 
     font-size: 1.2rem;
   }
+
+  .un {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .un::after {
+    content: "";
+
+    display: block;
+
+    width: 0px;
+    height: 3px;
+
+    background-color: $gray-primary;
+
+    transition: 0.3s;
+  }
+
+  .un:hover::after {
+    width: 100%;
+  }
 }
 
 ///////// Início /////////
@@ -305,7 +327,7 @@ nav {
       margin-top: 10rem;
       align-self: flex-end;
     }
-    
+
     .item-3 {
       margin-top: 10rem;
       align-self: flex-end;
@@ -314,16 +336,22 @@ nav {
     .img-item {
       max-width: 520px;
 
+      transition: all .5s;
+
       img {
         width: 100%;
         border-radius: 1rem;
       }
     }
 
+    .img-item:hover {
+      filter: brightness(75%);
+    }
+
     p {
       margin-top: 1rem;
 
-      font-size: .8rem;
+      font-size: 0.8rem;
       font-weight: 300;
 
       color: $gray-third;
@@ -334,25 +362,51 @@ nav {
 
       color: $gray-primary;
     }
+
+    .un::after {
+      background-color: $gray-primary;
+    }
   }
 
   .see-more {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-    justify-content: right;
+    text-align: right;
 
     p {
       font-size: 1.2rem;
       font-weight: 500;
       color: $blue-primary;
     }
-    
+
     span {
+      font-size: .8rem;
+      
+      text-align: center;
+      vertical-align: middle;
+      
       color: $blue-primary;
-      align-self: center;
     }
+  }
+
+  .un {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .un::after {
+    content: "";
+
+    display: block;
+
+    width: 0px;
+    height: 3px;
+
+    background-color: $blue-primary;
+
+    transition: 0.3s;
+  }
+
+  .un:hover::after {
+    width: 100%;
   }
 }
 
@@ -377,7 +431,8 @@ nav {
       align-items: center;
       justify-content: center;
 
-      .item-1, .item-3 {
+      .item-1,
+      .item-3 {
         margin: 0;
       }
     }
@@ -465,7 +520,7 @@ nav {
       font-size: 3rem;
       max-width: 500px;
     }
-    
+
     .img-item {
       max-width: 550px;
     }
