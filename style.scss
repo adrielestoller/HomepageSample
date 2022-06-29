@@ -145,7 +145,7 @@ nav {
     button {
       width: 40%;
       padding: 0.7rem;
-      margin-left: .3rem;
+      margin-left: 0.3rem;
 
       font-size: 0.7rem;
       text-align: center;
@@ -281,6 +281,81 @@ nav {
   }
 }
 
+///////// Nossos Trabalhos /////////
+
+.our-works {
+  margin: 8rem 10rem 0 10rem;
+
+  h2 {
+    max-width: 300px;
+    margin-bottom: 5rem;
+
+    font-size: 1.5rem;
+
+    color: $gray-primary;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 0 2rem;
+
+    .item-1 {
+      margin-top: 10rem;
+      align-self: flex-end;
+    }
+    
+    .item-3 {
+      margin-top: 10rem;
+      align-self: flex-end;
+    }
+
+    .img-item {
+      max-width: 520px;
+
+      img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+
+      font-size: .8rem;
+      font-weight: 300;
+
+      color: $gray-third;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+
+      color: $gray-primary;
+    }
+  }
+
+  .see-more {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    justify-content: right;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $blue-primary;
+    }
+    
+    span {
+      color: $blue-primary;
+      align-self: center;
+    }
+  }
+}
+
 ///////// Tela Pequena /////////
 
 @media screen and (max-width: 768px) {
@@ -288,8 +363,24 @@ nav {
     display: none;
   }
 
-  .services {
+  .services,
+  .our-works {
     margin: 6rem 2rem 0 2rem;
+  }
+
+  .our-works {
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      align-items: center;
+      justify-content: center;
+
+      .item-1, .item-3 {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -366,6 +457,33 @@ nav {
 
       align-items: center;
       justify-content: center;
+    }
+  }
+
+  .our-works {
+    h2 {
+      font-size: 3rem;
+      max-width: 500px;
+    }
+    
+    .img-item {
+      max-width: 550px;
+    }
+
+    .grid-container {
+      p {
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .see-more {
+      p {
+        font-size: 1.5rem;
+      }
     }
   }
 }
